@@ -22,7 +22,7 @@ API에 통일된 규칙을 적용함으로써 전체적인 시스템을 단순�
 - 일관된 형태 => 각 리소스는 인터페이스 내에서 일관성을 지녀야 한다.
 - 자기묘사적 표현 => 각 리소스는 스스로를 통해 충분한 정보를 전달해야 한다.   
 - 하이퍼미디어 그 자체 => 클라이언트는 초기 URI만을 통해 동적으로 모든 자원과 다양한 상호작용을 할 수 있어야 한다.
-![best versus worst practice](/assets/1.1-uniform-interpace.png)
+![일관된 인터페이스 설명 자료](/assets/restful-api/1.1-uniform-interpace.png)
 
 ### 1.2 Client <-> Server의 분리
 
@@ -43,15 +43,17 @@ API에 통일된 규칙을 적용함으로써 전체적인 시스템을 단순�
 
 Cacheable이란 서버로부터의 응답(request)은 암묵적이든 명시적이든 반드시 캐시가능성에 대한 정보를 가져야 한다는 규칙이다.  
 만약 응답이 캐쉬 가능한 것이라면, 클라이언트는 응답 데이터를 일정 기간 동안 재사용할 수 있다.
-![cacheable](/assets/1.4-cacheable.png)
+![cacheable 설명 자료](/assets/restful-api/1.4-cacheable.png)
 
 ### 1.5 계층적 구조(Layered System)
 
 계층적 구조는 각 구성 요소의 작용을 제한시킴으로써 전체 구조가 계층적으로 구성될 수 있도록 하는 것을 의미한다
+![계층적 구조 설명 자료](/assets/restful-api/1.5-layered-system.png)
 
 ### 1.6 Code on Demand(Optional)
 
 REST는 클라이언트 사이드에서 코드를 다운받고, 실행하는 것을 허용한다.
+![Code on Demand 설명 자료](/assets/restful-api/1.6-code-on-demand.png)
 
 ---
 
@@ -64,8 +66,13 @@ Resource는 REST 구조에서 정보를 추상화한 핵심 요소라고 할 수
 
 - 자료 그 자체
 - 해당 Resource에 대한 메타 데이터
-- 추가적으로 접근하고자 하는 다른 Resource에 대한 하이퍼링크
-  > REST API는 서로 연결된 자원들의 집합이라고 할 수 있으며, 이러한 Resouce들의 집합을 REST API의 Resource Model이라고 한다.
+- 추가적으로 접근하고자 하는 다른 Resource에 대한 하이퍼링크   
+
+> REST API는 서로 연결된 자원들의 집합이라고 할 수 있으며, 이러한 Resouce들의 집합을 REST API의 Resource Model이라고 한다.
+>> URI? URL? URN?
+>>> URI(Uniform Resource Identifier): 특정 자원을 식별할 수 있도록 하는 일정한 규칙을 가진 모든 식별자   
+>>> ★URL(Uniform Resource Locator): 주소 식별자   
+>>> URN(Uniform Resource Name): 이름 식별자   
 
 ---
 
@@ -77,7 +84,11 @@ Resource는 REST 구조에서 정보를 추상화한 핵심 요소라고 할 수
 
 ### 3.3 Resource를 필터링할 때에는 쿼리 파라미터를 활용할 것
 
-### 3.4 가독성을 위해서는 '-'(하이픈)을 사용할 것('\_' X)
+### 3.4 가독성을 위해서는 '-'(하이픈)을 사용할 것('_' X)
+
+### 3.5 URL에는 소문자만 사용할 것   
+
+![RESTful API 설계 팁 설명 자료](/assets/restful-api/3-tip.png)   
 
 ---
 
