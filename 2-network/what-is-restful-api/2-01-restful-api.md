@@ -112,9 +112,9 @@ RESTful API란 결국 어플리케이션을 단순하고, 가볍고, 빠르게 �
 
 > 참고 자료
 >
-> > REST API Tutorial: https://restfulapi.net/  
-> > REST의 창시자인 Roy T. Fielding의 포스트: https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
+>> REST API Tutorial: https://restfulapi.net/  
+>> REST Resource Naming Guide: https://restfulapi.net/resource-naming/
 
 > 더 읽어보면 좋을 자료
->
-> > REST Resource Naming Guide: https://restfulapi.net/resource-naming/
+> 
+>> REST의 창시자인 Roy T. Fielding의 포스트: https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
