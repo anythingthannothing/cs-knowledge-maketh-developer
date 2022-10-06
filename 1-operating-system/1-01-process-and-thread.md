@@ -1,19 +1,38 @@
-# 브라우저에 google.com을 치면 일어나는 일
+# Process & Thread(작성 중)
 
-브라우저에 google.com을 치고 엔터를 쳤을 때 일어나는 일을 개략적으로 살펴보자.   
-최대한 high-level단에 맞춰 간략히 정리하려고 했으며,   
-추가로 공부하길 추천하는 주제들은 별도로 정리하였다.   
-여기서는 브라우저 검색창에 'google.com'을 문자열 그대로 입력하고 엔터를 친 상황을 기준으로 살펴본다. 
-
----
-
-## 1. URL Parsing
-최신 브라우저의 주소 입력창은 input이 변경되는 대로 문자열을 parsing하기 때문에   
-google.com의 입력을 마치는 대로 브라우저는 이를 URL로 인식하고 있는 상태라고 할 수 있다.(정확히는 google.co 시점에서)   
+운영체제에 있어 가장 중요한 주제 중 하나인 프로세스와 스레드에 대해 살펴보자.   
+먼저 프로세스와 스레드가 무엇인지, 이 둘이 어떻게 다른지 살펴보고   
+추후에 Processing과 Threading에 대해 추가로 다뤄보고자 한다.   
+추가로 공부하면 좋을 주제들은 별도로 정리하였다.   
 
 ---
 
-## 2. HTTP(port 80)? HTTPS(port 443)?
+## 1. Process
+Process는 '어떤 일 발생해서 완료되기 까지의 과정' 자체를 의미한다.   
+여기서 말하는 '어떤 일'은 프로그래밍 언어를 통해 코드로 작성되어 실행 가능한 상태의 프로그램이며,   
+이 프로그램이 실행되고 있는 과정을 Process라고 할 수 있다.(Process == a Program in execution)   
+최근에는 하나의 프로그램이 여러 Process에 의해 작동되는 경우도 많으므로,   
+Process가 실행 중인 Program과 정확히 일치하지 않는다는 것 정도만 알아두자.
+
+### 1.1 Process State
+Process가 실행되어 종료될 때까지 Process의 상태는 수시로 변한다.
+각각의 Process가 가질 수 있는 상태 목록은 다음과 같다.
+- New: Program이 실행되어 Process의 진행을 위해 생성된 상태
+- Ready: Process가 스케쥴링에 의해 processor에 할당받길 기다리고 있는 상태
+- Running: Program에 정의된 일련의 코드들이 실행되고 있는 상태
+- Waiting: Process가 입출력 처리 등 다른 Event가 완료되길 기다리고 있는 상태(Not Ready)
+- Terminated: Process의 모든 코드들이 실행되어 종료된 상태
+
+---
+
+## 2. Thread
+Thread는 '실', '꿰다'의 의미를 가진 것에서 알 수 있듯 한 Process 안에 속한 하나의 '실행 단위'이다.
+Process는 단 하나의 Thread만을 가질 수도 있고, 여러 Thread로 이루어질 수도 있다.
+
+
+---
+(수정 예정)
+
 URL 파싱이 끝난 후 브라우저가 가장 먼저하는 일은 어떤 프로토콜을 통해 GET Request를 보낼 지 결정하는 것이다.   
 브라우저는 HSTS(HTTP Strict Transport Security) 캐시에서 도메인을 검색하고   
 검색 결과에 따라 어떤 프로토콜을 통해 요청을 보낼 지를 결정한다.   
