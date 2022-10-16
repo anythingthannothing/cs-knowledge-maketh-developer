@@ -7,8 +7,26 @@
 ---
 운영체제에 있어 가장 중요한 주제 중 하나인 프로세스와 스레드에 대해 살펴보자.   
 
-## 1. Process
-Process는 '어떤 일 발생해서 완료되기 까지의 과정' 자체를 의미한다.   
+## 1. XSS(Cross-Site Scripting)
+XSS는 대표적인 웹 보안 취약점 중 하나로,   
+악의적인 사용자가 공격하려는 사이트에 악성 스크립트를 주입하는 것을 의미한다.
+XSS를 통해 다른 페이지로 리다이렉트시키거나, 쿠키 등을 탈취하여 세션 하이재킹 공격을 할 수 있다.
+대표적인 공격 방식은
+1. Stored XSS: 악성 스크립트를 서버에 저장한 후 서비스를 제공하는 정상 페이지에 노출시키도록 하는 공격 기법
+2. Reflected XSS: 쿼리 스트링을 사용할 때 발생하는 취약점을 이용한 공격 기법
+3. DOM Based XSS 등이 있다.
+
+## 2. XSS 취약점 공격 사례
+1. 트위터 JS 
+2. 
+
+## 3. XSS 방어 기법
+1. innerHTML의 사용을 최대한 자제한다.
+2. 쿠키 설정 시 'HttpOnly' 옵션을 활성화한다.
+3. 응답 헤더의 'Content-Security-Policy'를 설정한다.
+4. LocalStorage에는 세션 ID와 같은 민감한 정보를 저장하지 않는다.
+5. XSS에 사용되는 특수문자를 치환하여 저장한다.
+
 여기서 말하는 '어떤 일'은 프로그래밍 언어를 통해 코드로 작성되어 실행 가능한 상태의 프로그램이며,   
 이 프로그램이 실행되어 종료될 때까지의 전체 과정을 Process라고 할 수 있다.(Process == a Program in execution)   
 **달리 말하면 프로세스는 운영체제로부터 필요한 자원을 할당 받는 '작업 단위'라고 할 수 있다.**   
@@ -128,7 +146,7 @@ Process는 단 하나의 Thread만을 가질 수도 있고, 여러 Thread로 이
 ---
 
 > 참고 자료
->> Neso Academy youtube: https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O   
+>> Hussein Nasser's youtube: https://www.youtube.com/watch?v=pD6C1-zSxIM   
 
 > 더 생각해보기
 >> 어떤 상황에서 멀티 프로세싱을해야 하고 어떤 상황에서 멀티 스레딩을 해야 할까?
