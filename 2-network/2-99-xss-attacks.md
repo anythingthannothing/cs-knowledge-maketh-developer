@@ -28,7 +28,7 @@ XSS를 통해 다른 페이지로 리다이렉트시키거나, 쿠키 등을 탈
 4. LocalStorage에는 세션 ID와 같은 민감한 정보를 저장하지 않는다.
 5. XSS에 사용되는 특수문자를 치환하여 저장한다.
 와 같은 가이드 라인이 있지만 보안 전문가가 아닌 이상,   
-DOMPurify, Helmet 같은 라이브러리 등을 활용하는 편이 낫다.
+개인 프로젝트 등에서는 DOMPurify, Helmet 같은 라이브러리를 활용하는 편이 더 현실적일 것 같다.   
 
 ---
 
@@ -53,7 +53,4 @@ DOMPurify, Helmet 같은 라이브러리 등을 활용하는 편이 낫다.
 >> [Youtube] PwnFunction: https://www.youtube.com/watch?v=EoaDgUgS6QA 
 
 > 추가로 공부하면 좋을 주제들
->> Scheduling Algorithms   
->> Synchronous vs Asynchronous   
->> Blocking vs Non-blocking   
->> Critical Section
+>> CSRF(Cross-Site Request Forgery)
