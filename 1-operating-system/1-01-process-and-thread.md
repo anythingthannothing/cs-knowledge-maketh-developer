@@ -125,7 +125,7 @@ Process는 단 하나의 Thread만을 가질 수도 있고, 여러 Thread로 이
 
 ---
 
-> 참고 자료
+> 추천 자료
 >> Neso Academy youtube: https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O   
 
 > 더 생각해보기

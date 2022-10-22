@@ -112,7 +112,7 @@ GET Request에 필요한 파일(index.html 등)을 찾아 클라이언트에게 
 
 ---
 
-> 참고 자료
+> 추천 자료
 >> Hussein Nasser's youtube: https://www.youtube.com/watch?v=dh406O2v_1c&t=57s    
 : Video "What happens when you type google.com into your browser and press enter? (Detailed Analysis)"   
 

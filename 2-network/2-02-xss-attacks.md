@@ -52,7 +52,7 @@ XSS 취약점 공격은 가장 널리 알려진 보안 문제로 원리는 간�
 
 ---
 
-> 참고 자료
+> 추천 자료
 >> [Blog] NordVPN: https://nordvpn.com/ko/blog/xss-attack/      
 >> [Youtube] PwnFunction: https://www.youtube.com/watch?v=EoaDgUgS6QA 
 
