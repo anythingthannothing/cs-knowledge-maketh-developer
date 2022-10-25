@@ -1,12 +1,12 @@
 # 'REST'ful API란 무엇일까?
 
-REST는 '**RE**presentational **S**tate **T**ransfer'의 축약어로, 분산형 미디어 시스템에 대한 스타일 가이드라고 할 수 있다.  
-다른 여러 구조들의 스타일 가이드와 마찬가지로 REST 또한 가이드라인과 제약조건들을 가지고 있으며  
+REST는 '**RE**presentational **S**tate **T**ransfer'의 축약어로,   
+분산형 미디어 시스템(웹)을 설계하는데 사용되는 스타일 가이드라고 할 수 있다.  
+다른 여러 구조들의 스타일 가이드와 마찬가지로 REST 또한 여러 제약조건들을 가지고 있으며  
 **RESTful**하다는 것은 결국 이러한 가이드 라인을 잘 준수한다는 것을 의미한다.
 
 > RESTful API: REST 스타일 가이드를 준수하는 웹 API 또는 웹 서비스
->
-> > API(Application Programming Interface) => 컴퓨터끼리 의사소통하기 위한 방법
+>> API(Application Programming Interface) => 컴퓨터끼리 의사소통하기 위한 방법
 
 ---
 

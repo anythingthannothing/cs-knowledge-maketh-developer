@@ -4,6 +4,7 @@
 
 - [README](#readme)
 - [0. Development](#0-development)
+<!-- - [1. Computer Architecture](#1-computer-architecture) -->
 - [1. Operating System](#1-operating-system)
 - [2. Network](#2-network)
 <!-- - [4. JS & Node.js](#part-1-전산-기초) -->
@@ -20,11 +21,12 @@ CS 지식이 좋은 개발자를 만든다는 생각으로 운영하는 저장�
 
 # 1. Operating System 
 ### [저장소 바로가기 ➡](https://github.com/anythingthannothing/cs-knowledge-maketh-developer/tree/main/1-operating-system)
+- 운영체제(작성 中)
 - 프로세스와 스레드 비교해서 살펴보기
 
 # 2. Network
 ### [저장소 바로가기 ➡](https://github.com/anythingthannothing/cs-knowledge-maketh-developer/tree/main/2-network)
-- 브라우저 주소창에 "Google.com"을 치면 일어나는 일
+- 브라우저 주소창에 'Google.com'을 치면 일어나는 일
 - API가 'REST'ful하다는 것(RESTful API)
 - XSS 취약점 공격
 
