@@ -67,18 +67,20 @@ PUT과 달리 리소스의 일정 부분만 변경할 때 사용되도록 설계
 다만, 앞선 4가지 메서드로 충분히 구현이 힘든 API가 있다면 PATCH를 적극적으로 활용하자.   
 EX) Soft Delete / 공개 ↔ 비공개 토글 / 상태 변경
 
-### 1.6 OPTIONS
+### 1.6 OPTIONS(Pre-fligth)
 
-웹 브라우저는 GET 요청을 보내기에 앞서 요청 가능한 메서드 등을 확인(통신 옵션 확인)하기 위해   
-'Pre-Flight'라는 요청을 보내는데, 이때 활용되는 것이 OPTIONS 메서드다.   
-OPTIONS 메서드는 웹 브라우저가 보내는 요청으로 개발자가 구현할 일은 거의 없으며,   
-'CORS'와 관련된 이슈이므로 Back-End 개발자에게 맡겨두자.
+웹 브라우저는 Cross-Origin 요청을 보내기에 앞서 요청 가능한 메서드 등을 확인(통신 옵션 확인)하기 위해   
+'Pre-flight'라는 요청을 보내는데, 이때 활용되는 것이 OPTIONS 메서드다.   
+Pre-flight는 웹 브라우저가 보안을 위해 보내는 요청으로,   
+'CORS'와 관련된 이슈이므로 추가로 공부해 보도록 하자.
 
-### 1.7 HEAD
+### 1.7 HEAD(No Body)
 유사 GET 요청으로, 유일한 차이점은 응답에 Body를 포함하지 않는다는 것이다.   
 일반적인 GET 요청과 동일한 헤더를 응답받기 때문에,   
 1) 서버 상태 확인(Ping)   
 2) 응답 헤더의 'Content-Length' 확인 목적으로 사용할 수 있다.   
+
+![GET versus HEAD](/assets/http-method/getvshead.png)   
 
 ---
 <br>
@@ -96,8 +98,7 @@ OPTIONS 메서드는 웹 브라우저가 보내는 요청으로 개발자가 구
 >> f(f(x)) == f(x), 1 + 1, 구글 Home 화면 GET 요청   
 
 > Idempotent하지 않은 것   
->> f(f(x)) != f(x), x + 1, 회원가입 요청(성공 -> ID 중복으로 인한 실패), 결제(내가 시킨 치킨이 두 번 결제 된다면?)
-
+>> f(f(x)) != f(x), x + 1, 회원가입 요청(성공 -> ID 중복으로 인한 실패), 결제(내가 시킨 치킨이 두 번 결제 된다면,,,)
 
 ### 2.3 캐시 가능성(Cacheable)
 응답의 결과를 캐시할 수 있는 지를 결정하는 속성이다.   
@@ -116,26 +117,11 @@ HTML, CSS, JS와 같은 정적 파일에 대한 GET 요청은 캐시할 수 있�
 
 ## 4. Summary
 
-결론적으로 REST란 각종 데이터와 기능들을 Resource로 정의하고,   
-Resource에 대한 접근을 일관성 있는 URI를 통해 하도록 하는 구조라고 할 수 있다.  
-RESTful한 API를 위해서는 다음과 같은 6가지의 가이드 라인을 준수해야 한다.
-
-1. 일관된 인터페이스
-2. 클라이언트 <-> 서버의 분리
-3. 무상태(Stateless)
-4. 캐시 가능성
-5. 계층적 구조
-6. Code on Demand(Optional)
-
-각 Resource는 단순하고, 제대로 설계된 방식을 기반으로 클라이언트 <-> 서버 사이에서 작동해야 하며,  
-표준화된 인터페이스와 프로토콜 위에서 Resource가 교환되어야 한다.   
-각 Resource의 메타 데이터는 1) 캐싱 2) 에러 감지 3) 컨텐츠 협상 4) 인증 5) 권한 관리를 위해 사용되며,  
-클라이언트와 서버 사이의 상호작용은 무상태로 이루어져야 한다.  
-RESTful API란 결국 어플리케이션을 단순하고, 가볍고, 빠르게 만드는 것이 목적이라고 할 수 있다.
+HTTP 메서드는 클라이언트가 서버에게 보내는 요청의 성격을 구분짓는 역할을 한다.   
+HTTP 메서드는 Control URI(ex /api/users/create, delete 등)를 최소화하고,   
+RESTful API를 설계하는 데에 있어서도 필수적인 요소다.
+하지만 Convention, Protocol이라는 것이 늘 그렇듯   
+규칙을 완벽히 준수하는 것보다 통일성을 지키는 것이 더 중요하다.
 
 > 추천 자료
->> REST API Tutorial: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods  
->> REST Resource Naming Guide: https://restfulapi.net/resource-naming/
-
-> 더 읽어보면 좋을 자료
->> REST의 창시자인 Roy T. Fielding의 포스트: https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
+>> MDN HTTP Methods: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods  
