@@ -29,5 +29,7 @@ CS 지식이 좋은 개발자를 만든다는 생각으로 운영하는 저장�
 - 브라우저 주소창에 'Google.com'을 치면 일어나는 일
 - API가 'REST'ful하다는 것(RESTful API)
 - XSS 취약점 공격
+- HTTP 메서드
+- HTTP 상태 코드
 
 <!-- # CS 공부 관련 추천 자료 -->
