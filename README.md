@@ -17,9 +17,10 @@ CS 지식이 좋은 개발자를 만든다는 생각으로 운영하는 저장�
 
 # 0. Development
 ### [저장소 바로가기 ➡](https://github.com/anythingthannothing/cs-knowledge-maketh-developer/tree/main/0-development)
-- [디자인 패턴] MVC 패턴
+- [아키텍쳐 패턴] MVC 패턴
 - [컨벤션] 네이밍 컨벤션
 - [컨벤션] 깃 컨벤션
+- [디자인 패턴] 깃 컨벤션
 
 # 1. Operating System 
 ### [저장소 바로가기 ➡](https://github.com/anythingthannothing/cs-knowledge-maketh-developer/tree/main/1-operating-system)
