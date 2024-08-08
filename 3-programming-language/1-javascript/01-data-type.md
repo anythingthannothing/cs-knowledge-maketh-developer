@@ -20,3 +20,4 @@
 - 모든 변수의 선언이 코드가 실행되기 이전에 이루어지는 현상
 - let과 const도 Hoisting의 대상이 되며, var와 달리 초기화가 되지는 않음
   - var는 Hoisiting 시 선언과 함께 undefined로 초기화가 이루어짐
+- var는 함수 레벨 스코프만 생성하고, let & const는 함수 레벨 스코프와 블록 레벨 스코프 모두 생성
